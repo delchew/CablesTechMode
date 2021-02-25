@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CablesTechModeWindowsFormsApp", "CablesTechModeWindowsFormsApp\CablesTechModeWindowsFormsApp.csproj", "{6ED8736B-729E-405D-BBA9-1A5997A31557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CablesTechModeCommon", "CablesTechModeCommon\CablesTechModeCommon.csproj", "{8FC06590-487F-4974-900A-92288C1C431E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ED8736B-729E-405D-BBA9-1A5997A31557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED8736B-729E-405D-BBA9-1A5997A31557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED8736B-729E-405D-BBA9-1A5997A31557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED8736B-729E-405D-BBA9-1A5997A31557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FC06590-487F-4974-900A-92288C1C431E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC06590-487F-4974-900A-92288C1C431E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC06590-487F-4974-900A-92288C1C431E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC06590-487F-4974-900A-92288C1C431E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F43D31C-995B-4E94-BB3F-865FB1E765D1}
+	EndGlobalSection
+EndGlobal
