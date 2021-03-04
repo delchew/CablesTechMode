@@ -1,39 +1,39 @@
 ﻿using CablesDatabaseEFCoreFirebird;
 using CablesDatabaseEFCoreFirebird.Entities;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace CableTechModeCommon
 {
-    public class DBRepository
+    public class DBRepository : IDisposable
     {
-        private readonly string _connectionString;
+        private CablesContext _context;
         public DBRepository(string connectionString)
         {
-            _connectionString = connectionString;
+            _context = new CablesContext(connectionString);
         }
 
         public IEnumerable<CableShortName> GetCablesShortNames()
         {
-            using (var context = new CablesContext(_connectionString))
-            {
-                var names = context.CableShortNames.AsNoTracking()
+            var names = _context.CableShortNames.AsNoTracking()
                                                    .ToList();
-                return names;
-            }
+            return names;
         }
 
         public IEnumerable<InsulatedBillet> GetBilletsByCableShortNameId(int CableShortNameId)
         {
-            using (var context = new CablesContext(_connectionString))
-            {
-                var billets = context.InsulatedBillets.AsNoTracking()
+            var billets = _context.InsulatedBillets.AsNoTracking()
                                                       .Include(b => b.Conductor)
                                                       .Where(b => b.CableShortNameId == CableShortNameId)
                                                       .ToList();
-                return billets;
-            }
+            return billets;
+        }
+
+        public void Dispose()
+        {
+            _context?.Dispose();
         }
     }
 }

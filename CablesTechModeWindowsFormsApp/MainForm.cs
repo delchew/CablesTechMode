@@ -1,18 +1,20 @@
 ﻿using System;
 using CableTechModeCommon;
 using System.Windows.Forms;
-using System.Linq;
 
 namespace CablesTechModeWindowsFormsApp
 {
     public partial class MainForm : Form, IView
     {
         public event Action<int> ShortNameChanged;
+        public event Action ViewClosed;
+
         public ProgramDataRepository ProgramDataRepository { get; set; }
 
         public MainForm(ProgramDataRepository programDataRepository)
         {
             InitializeComponent();
+            this.FormClosed += MainForm_FormClosed;
             ProgramDataRepository = programDataRepository;
         }
 
@@ -21,16 +23,19 @@ namespace CablesTechModeWindowsFormsApp
             ShortNameChanged?.Invoke((int)cablesNamesListBox.SelectedValue);
         }
 
-        public void SetProgramData()
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            cablesNamesListBox.DataSource = ProgramDataRepository.CableShortNames;
+            var cableNamesBindingSource = new BindingSource { DataSource = ProgramDataRepository.CableShortNames };
+            cablesNamesListBox.DataSource = cableNamesBindingSource;
             cablesNamesListBox.DisplayMember = "ShortName";
-            cablesNamesListBox.ValueMember = "Id";
-            cablesNamesListBox.SelectedValueChanged += CablesNamesListBox_SelectedValueChanged;
+            var cableBilletsBindingSource = new BindingSource { DataSource = ProgramDataRepository.InsulatedBillets };
+            comboBox1.DataSource = cableBilletsBindingSource;
+            cablesNamesListBox.DisplayMember = "Diameter";
+        }
 
-            wireSquareListBox.DataSource = ProgramDataRepository.InsulatedBillets.Select(b => b.Conductor);
-            wireSquareListBox.DisplayMember = "AreaInSqrMm";
-            wireSquareListBox.ValueMember = "Id";
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ViewClosed?.Invoke();
         }
     }
 }

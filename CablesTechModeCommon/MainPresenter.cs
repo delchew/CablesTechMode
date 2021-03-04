@@ -17,6 +17,7 @@ namespace CableTechModeCommon
             _view = view;
             _programDataRepository = programDataRepository;
             _view.ShortNameChanged += View_ShortNameChanged;
+            _view.ViewClosed += View_ViewClosed;
 
             var builder = new ConfigurationBuilder();
             var jsonDir = Directory.GetCurrentDirectory();
@@ -27,10 +28,16 @@ namespace CableTechModeCommon
             // создаем конфигурацию
             var connectionStringConfig = builder.Build();
             // возвращаем из метода строку подключения
-            _connectionString = connectionStringConfig.GetConnectionString("TestJobConnection");
+            _connectionString = connectionStringConfig.GetConnectionString("JobConnection");
 
             _dbRepository = new DBRepository(_connectionString);
             FillDataRepository();
+        }
+
+        private void FillDataRepository()
+        {
+            _programDataRepository.CableShortNames = new ObservableCollection<CableShortName>(_dbRepository.GetCablesShortNames());
+            //_programDataRepository.InsulatedBillets = _dbRepository.GetBilletsByCableShortNameId(shortNameId);
         }
 
         private void View_ShortNameChanged(int shortNameId)
@@ -38,12 +45,11 @@ namespace CableTechModeCommon
             var billets = _dbRepository.GetBilletsByCableShortNameId(shortNameId);
             //_programDataRepository.InsulatedBillets =
         }
-
-        private void FillDataRepository()
+        private void View_ViewClosed()
         {
-            _programDataRepository.CableShortNames = new ObservableCollection<CableShortName>(_dbRepository.GetCablesShortNames());
-            _view.SetProgramData();
+            _dbRepository?.Dispose();
         }
+
     }
 }
  

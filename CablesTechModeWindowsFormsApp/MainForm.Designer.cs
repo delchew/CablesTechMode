@@ -30,7 +30,7 @@ namespace CablesTechModeWindowsFormsApp
         private void InitializeComponent()
         {
             this.cablesNamesListBox = new System.Windows.Forms.ListBox();
-            this.wireSquareListBox = new System.Windows.Forms.ListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // cablesNamesListBox
@@ -41,23 +41,24 @@ namespace CablesTechModeWindowsFormsApp
             this.cablesNamesListBox.Size = new System.Drawing.Size(121, 199);
             this.cablesNamesListBox.TabIndex = 0;
             // 
-            // wireSquareListBox
+            // comboBox1
             // 
-            this.wireSquareListBox.FormattingEnabled = true;
-            this.wireSquareListBox.Location = new System.Drawing.Point(141, 13);
-            this.wireSquareListBox.Name = "wireSquareListBox";
-            this.wireSquareListBox.Size = new System.Drawing.Size(120, 199);
-            this.wireSquareListBox.TabIndex = 1;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(152, 13);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.wireSquareListBox);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cablesNamesListBox);
             this.Name = "MainForm";
             this.Text = "Cables tech modes";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -65,7 +66,7 @@ namespace CablesTechModeWindowsFormsApp
         #endregion
 
         private System.Windows.Forms.ListBox cablesNamesListBox;
-        private System.Windows.Forms.ListBox wireSquareListBox;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
