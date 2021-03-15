@@ -16,7 +16,6 @@
     <ProjectReference Include="..\CablesTechModeCommon\CablesTechModeCommon.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="CablesDatabaseEFCoreFirebird, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="CablesDatabaseEFCoreFirebird">
       <HintPath>..\..\CablesDatabaseEFCoreFirebird\CablesDatabaseEFCoreFirebird\bin\Debug\netstandard2.0\CablesDatabaseEFCoreFirebird.dll</HintPath>
     </Reference>

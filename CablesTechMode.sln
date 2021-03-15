@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CablesTechModeWindowsFormsApp", "CablesTechModeWindowsFormsApp\CablesTechModeWindowsFormsApp.csproj", "{6ED8736B-729E-405D-BBA9-1A5997A31557}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CablesTechModeCommon", "CablesTechModeCommon\CablesTechModeCommon.csproj", "{8FC06590-487F-4974-900A-92288C1C431E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CablesTechModeCommon", "CablesTechModeCommon\CablesTechModeCommon.csproj", "{8FC06590-487F-4974-900A-92288C1C431E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CablesTechModeTests", "CablesTechModeTests\CablesTechModeTests.csproj", "{2EB8B06E-3B2A-43E4-9E97-A07FC678D1D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CablesTechModeTests", "CablesTechModeTests\CablesTechModeTests.csproj", "{2EB8B06E-3B2A-43E4-9E97-A07FC678D1D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CableTechModeWPFApp", "CableTechModeWPFApp\CableTechModeWPFApp.csproj", "{27243837-210E-4CD3-AE94-9E8652666ED7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{2EB8B06E-3B2A-43E4-9E97-A07FC678D1D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EB8B06E-3B2A-43E4-9E97-A07FC678D1D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EB8B06E-3B2A-43E4-9E97-A07FC678D1D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27243837-210E-4CD3-AE94-9E8652666ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27243837-210E-4CD3-AE94-9E8652666ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27243837-210E-4CD3-AE94-9E8652666ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27243837-210E-4CD3-AE94-9E8652666ED7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
