@@ -8,9 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="103*"/>
-            <ColumnDefinition Width="697*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="690*"/>
         </Grid.ColumnDefinitions>
+        <ListBox/>
 
     </Grid>
 </Window>

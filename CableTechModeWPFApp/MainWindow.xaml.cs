@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CableTechModeCommon;
+using CableTechModeWPFApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,8 @@ namespace CableTechModeWPFApp
         public MainWindow()
         {
             InitializeComponent();
+            var viewModel = new CablePropertiesViewModel();
         }
+
     }
 }
