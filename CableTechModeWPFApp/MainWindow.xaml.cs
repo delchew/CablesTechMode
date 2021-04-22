@@ -26,6 +26,7 @@ namespace CableTechModeWPFApp
         {
             InitializeComponent();
             var viewModel = new CablePropertiesViewModel();
+            listBox.ItemsSource = viewModel.CableShortNames;
         }
 
     }
