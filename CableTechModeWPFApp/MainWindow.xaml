@@ -11,7 +11,7 @@
             <ColumnDefinition Width="110*"/>
             <ColumnDefinition Width="690*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="listBox" Grid.Row="0" Grid.Column="0">
+        <ListBox x:Name="listBox" Grid.Row="0" Grid.Column="0" Margin="10">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text ="{Binding ShortName}"/>

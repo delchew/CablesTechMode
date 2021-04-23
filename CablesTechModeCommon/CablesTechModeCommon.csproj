@@ -10,6 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Cables">
+      <HintPath>..\..\Cables\Cables\bin\Debug\netstandard2.0\Cables.dll</HintPath>
+    </Reference>
     <Reference Include="CablesDatabaseEFCoreFirebird">
       <HintPath>..\..\CablesDatabaseEFCoreFirebird\CablesDatabaseEFCoreFirebird\bin\Debug\netstandard2.0\CablesDatabaseEFCoreFirebird.dll</HintPath>
     </Reference>

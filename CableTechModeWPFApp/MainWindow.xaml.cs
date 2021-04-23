@@ -22,12 +22,18 @@ namespace CableTechModeWPFApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private CablePropertiesViewModel _viewModel;
         public MainWindow()
         {
             InitializeComponent();
-            var viewModel = new CablePropertiesViewModel();
-            listBox.ItemsSource = viewModel.CableShortNames;
+            _viewModel = new CablePropertiesViewModel();
+            listBox.ItemsSource = _viewModel.CableShortNames;
+            this.Closed += MainWindow_Closed;
         }
 
+        private void MainWindow_Closed(object sender, EventArgs e)
+        {
+            _viewModel?.Dispose();
+        }
     }
 }

@@ -4,10 +4,10 @@ using System.Text;
 
 namespace CablesTechModeCommon.BrandFormBuilders
 {
-    public abstract class BrandFormBuilder
-    {
-        protected string cableShortName;
+    public class BrandFormBuilder
+    {        
+        public string CableShortName { get; private set; }
 
-        private Stack<>
+        //private Queue<> 
     }
 }
